@@ -1,22 +1,24 @@
-from flask_restful import Resource, reqparse
-from core.output import Output
-# import val
+
+#-*- coding:utf-8 -*-
 '''
 @author: Zilin Hsu
-@file: globalval.py
+@file: api.py
 @time: 2019/10/25 11:05
 @desc:
 '''
-#-*- coding:utf-8 -*-
+from flask_restful import Resource, reqparse
+from core.output import Output
+from PIL import Image
+from glob import glob
+from werkzeug.datastructures import FileStorage
+
+
 import os
 import ocr
 import time
 import shutil
 import numpy as np
-from PIL import Image
-from glob import glob
 import uuid
-from werkzeug.datastructures import FileStorage
 
 
 class OrcApi(Resource):
@@ -54,6 +56,6 @@ class FileApi(Resource):
         suid = ''.join(uid.split('-'))
         type = f.filename.split('.')[-1]
 
-        url = './test_images/' + suid + "." + type
-        f.save(os.path.join('./test_images', suid + "." + type))
+        url = './upload/' + suid + "." + type
+        f.save(os.path.join('./upload', suid + "." + type))
         return Output.success(url)

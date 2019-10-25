@@ -95,7 +95,7 @@ if __name__ == '__main__':
     from PIL import Image
     from lib.fast_rcnn.config import cfg_from_file
     cfg_from_file('./ctpn/ctpn/text.yml')
-    im = Image.open('./test_images/1.jpg')
+    im = Image.open('./upload/1.jpg')
     img = np.array(im.convert('RGB'))
     text_recs, img_drawed, img = text_detect(img)
     Image.fromarray(img_drawed).save('result.jpg')

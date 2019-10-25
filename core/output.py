@@ -1,3 +1,11 @@
+'''
+@author: Zilin Hsu
+@file: output.py
+@time: 2019/10/25 10:35
+@desc: 全局返回参数封装
+
+'''
+
 import time
 from enum import Enum
 
