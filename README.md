@@ -1,6 +1,7 @@
 ## 后端部分接口
 #### 代码有点乱等待整理
 &emsp;&emsp;用户先将图片上传到服务器，服务器返回url，然后使用该url调用识别接口
+
 #### 全局返回参数
 ```
   'responseTime': 服务器响应时间 %Y-%m-%d %H:%M:%S"
@@ -24,6 +25,7 @@
 
 #### 上传文件
 - Method : Post
+- URL : /upload
 - Request : 名称为 file 的图片文件
 - Response : 
 ```
@@ -34,6 +36,7 @@
 ```
 #### 识别
 - Method : Get
+- URL : /ocr
 - Request : 
 ```
 {

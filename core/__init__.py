@@ -18,7 +18,7 @@ app.config.update(RESTFUL_JSON=dict(ensure_ascii=False))
 
 
 api = Api(app)
-api.add_resource(OrcApi, '/orc', endpoint='rewrite')
+api.add_resource(OrcApi, '/ocr', endpoint='ocr')
 api.add_resource(FileApi, '/upload', endpoint='uploadfiles')
 
 

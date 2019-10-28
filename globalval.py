@@ -16,8 +16,6 @@ from keras.models import Model
 from densenet import keys
 from densenet import densenet
 
-
-
 global basemodel,graph,nclass
 
 
@@ -36,3 +34,4 @@ basemodel = Model(inputs=input, outputs=y_pred)
 modelPath = os.path.join(os.getcwd(), './densenet/models/weights_densenet.h5')
 if os.path.exists(modelPath):
     basemodel.load_weights(modelPath)
+
