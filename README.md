@@ -35,17 +35,18 @@
 
 ```
 #### 识别
-- Method : Get
+- Method : Post
 - URL : /ocr
 - Request : 
 ```
 {
-    image_url : str //图片在服务器上的路径
+    image_url : str  //图片在服务器上的路径
 }
 ```
 - Response : 
 ```
 {
-    text : str //识别结果
+    text : str, //识别结果
+    res_url : str //识别结果图片路径，访问需要在前面拼接ip端口
 }
 ```
